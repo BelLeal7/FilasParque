@@ -69,6 +69,7 @@ public class Juego {
 
     public void salidaJuego() {
         //salen los que ya pasaron al juego
+        
     }
 
 
