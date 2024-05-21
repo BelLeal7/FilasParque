@@ -17,10 +17,20 @@ public class Juego {
     private int ticket;
     private int cont = 0;
     private int capJuego;
+    private String nombre;
 
-    public Juego(int ticket, int capJuego) {
+    public Juego(int ticket, int capJuego, String nombre) {
         this.ticket = ticket;
         this.capJuego = capJuego;
+        this.nombre = nombre;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
     }
 
     public int getCont() {
@@ -56,28 +66,6 @@ public class Juego {
     }
 
     public boolean capJuego() {
-        //Comprobar cuanta gente hay dentro del parque
         return cont != capJuego;
     }
-
-   public void ingresoJuego(Visitante visitante) {
-        // ingresa a la fila por id;
-        if (capJuego()){
-            visitante.setTicket(ticket);
-           juego.add(visitante);
-        cont++;
-    }
-        else{
-            System.out.println("fila llena");
-        }
-    }
-
-    public void salidaJuego() {
-        //salen los que ya pasaron al juego
-        
-        juego.poll();
-        cont--;   
-    }
-
-
 }

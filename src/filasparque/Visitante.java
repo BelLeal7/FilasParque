@@ -9,7 +9,7 @@ package filasparque;
  * @author Usuario
  */
 public class Visitante {
-    
+
     private String nombre;
     private String apellido;
     private int identificador;
@@ -21,8 +21,6 @@ public class Visitante {
         this.identificador = identificador;
         this.ticket = 0;
     }
-
- 
 
     public String getNombre() {
         return nombre;
@@ -55,7 +53,10 @@ public class Visitante {
     public void setTicket(int ticket) {
         this.ticket = ticket;
     }
-    
-  
-    
+
+    @Override
+    public String toString() {
+        return "visitante " + nombre + " con identificador " + identificador;
+    }
+
 }
